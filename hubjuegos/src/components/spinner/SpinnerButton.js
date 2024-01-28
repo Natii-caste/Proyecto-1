@@ -1,4 +1,5 @@
 import "./SpinnerButton.css";
+
 const template = () =>
   `<div class="containerSpinnerButton">
     <div class="lds-ripple">

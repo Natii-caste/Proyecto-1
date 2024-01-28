@@ -1,4 +1,4 @@
-import { CardsPokemons } from "../components";
+import { CardPokemons } from "../components";
 
 export const Paginacion = (data, numberElement) => {
   const longitud = data.length;
@@ -25,7 +25,7 @@ export const Paginacion = (data, numberElement) => {
     allButton[0].style.color = " #083905ff";
   }
 
-  CardsPokemons(data.slice(0, numberElement));
+  CardPokemons(data.slice(0, numberElement));
 };
 
 //! -----------------------------------------------------------------------------------------
@@ -48,6 +48,6 @@ const addListeners = (buttonNumber, data, numberElement, i) => {
     const end = (i + 1) * numberElement;
     const start = end - numberElement < 0 ? 0 : end - numberElement;
 
-    CardsPokemons(data.slice(start, end));
+    CardPokemons(data.slice(start, end));
   });
 };

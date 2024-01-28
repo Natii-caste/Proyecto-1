@@ -1,7 +1,7 @@
 import { getUserData, setUserData } from "../../global/state/globalState";
 import "./CardPokemons.css";
 
-export const CardsPokemons = (data) => {
+export const CardPokemons = (data) => {
   const appUser = getUserData();
 
   document.getElementById("galleryPokemon").innerHTML = "";

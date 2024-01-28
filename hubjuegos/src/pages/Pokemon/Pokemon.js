@@ -1,6 +1,6 @@
 import {
   PrintTemplateSpinner,
-  CardsPokemons,
+  CardPokemons,
   PrintButton,
   PrintSpinner,
 } from "../../components";
@@ -65,4 +65,4 @@ export const PrintPokemonPage = () => {
   dataService();
 };
 
-//!!!!!!!!!!CardsPokemons();
+//!!!!!!!!!!CardPokemons();
