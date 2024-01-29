@@ -64,5 +64,3 @@ export const PrintPokemonPage = () => {
   PrintSpinner();
   dataService();
 };
-
-//!!!!!!!!!!CardPokemons();

@@ -34,8 +34,15 @@
     margin: 0 0 3rem 0;
     gap: 0.5rem;
     & button {
-      width: 30px;
-      height: 30px;
-      border-radius: 5px;
+      display: inline-block;
+      padding: 5px 10px;
+      font-size: 16px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 50%; /* Hace que el botón sea redondo */
+      border: 2px solid #3498db; /* Borde del botón */
+      color: #3498db; /* Color del texto */
+      background-color: white; /* Color de fondo */
+      cursor: pointer;
     }
   }

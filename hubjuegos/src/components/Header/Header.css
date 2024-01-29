@@ -27,7 +27,7 @@ header {
       }
     }
     & .logo {
-      width: 20vw;
+      width: 30vw;
       height: 100%;
       object-fit: cover;
       @media (max-width: 600px) {

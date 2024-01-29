@@ -10,7 +10,8 @@
   
     & #titleLogin {
       margin: 2rem;
-      font-size: 4em;
+      font-size: 6em;
+      color: black;
     }
   
     & input {

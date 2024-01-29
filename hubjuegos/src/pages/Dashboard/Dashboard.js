@@ -13,29 +13,20 @@ const template = () => `
       <li>
         <figure id="navigatePokemon">
           <img
-            src="https://res.cloudinary.com/dq186ej4c/image/upload/v1689761508/pngwing.com_r0hr9b.png"
+            src="https://cdn-icons-png.flaticon.com/512/871/871383.png"
             alt="go to page pokemon"
           />
           <h2>POKEMON</h2>
         </figure>
       </li>
       <li>
-        <figure>
+        <figure id= "navigateahorcado"> //!meto el id de mi minijuego
           <img
-            src="https://res.cloudinary.com/dq186ej4c/image/upload/v1689761641/pngwing.com_1_iq8zfk.png"
-            alt=" go to wacka topo game"
-          />
-          <h2>WACKA TOPO</h2>
-        </figure>
-      </li>
-      <li>
-        <figure>
-          <img
-            src="https://res.cloudinary.com/dq186ej4c/image/upload/v1689761735/6168776_kfna36.png"
-            alt="go to memory game"
-          />
-          <h2>MEMORY GAME</h2>
-        </figure>
+            src="https://play-lh.googleusercontent.com/8kcyCd2wFrUqaLGWuJJ4FhpqeH0IJv7MNWHNyYwiasskTT0kgB7r0B_XU2bop4oofhQt=w240-h480-rw"
+            alt=" vamos a jugar al ahorcado"
+          />  
+          <h2>AHORCADO</h2>
+        </figure> 
       </li>
     </ul>
   </div>
@@ -50,6 +41,10 @@ const addEventListeners = () => {
   const navigatePokemon = document.getElementById("navigatePokemon");
   navigatePokemon.addEventListener("click", () => {
     initControler("Pokemon");
+  });
+  const navigateAhorcado = document.getElementById("navigateahorcado"); //!creo el addEventListener del minijuego
+  navigateAhorcado.addEventListener("click", () => {
+    initControler("Ahorcado"); //!me lo mando a route
   });
 };
 

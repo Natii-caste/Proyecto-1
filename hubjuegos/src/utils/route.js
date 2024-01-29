@@ -1,7 +1,12 @@
 //1. Importamos la funcion getUser del modulo globalState que es el que obtiene la informacion sobre el usuario.
 
 import { getUser } from "../global/state/globalState";
-import { Login, PrintPokemonPage, printTemplateDashboard } from "../pages";
+import {
+  Login,
+  PrintPokemonPage,
+  PrintsGameTemplate,
+  printTemplateDashboard, //!importo el print del ahorcado
+} from "../pages";
 
 /// estas paginas se haran en el punto 6 ------> Login, PrintPokemonPage, printTemplateDashboard
 
@@ -25,8 +30,8 @@ export const initControler = (pagesRender) => {
     case "Dashboard":
       printTemplateDashboard();
       break;
-    case "Topo":
-      "PrintTopoPage() -----> en caso de que lo haya";
+    case "Ahorcado":
+      PrintsGameTemplate(); //!pongo el print de antes
       break;
     case "Login":
       Login();

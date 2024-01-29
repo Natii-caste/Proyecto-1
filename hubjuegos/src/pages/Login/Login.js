@@ -20,7 +20,7 @@ const addListeners = () => {
 
     /**
      * Lo unico especial tiene este login es que comprueba si ya tenemos un usuario
-     * en el local con datos dee algun usuario con el mismo nombre
+     * en el local con datos de algun usuario con el mismo nombre
      * y asi lo asocia para coger los me gusta de los pokemon
      */
 

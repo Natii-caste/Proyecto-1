@@ -1,16 +1,14 @@
+
+/*@import url('https://fonts.googleapis.com/css2? family= Carter+One & display=swap');*/
+
 body{
     margin: 0; /*margen = 0*/
-    background: url(img/fondo.png) no-repeat center;/*le estoy diciendo donde esta mi imagen de fondo que no se va a repetir y que va a estar centrada en todos los sentidos.*/
+    
     background-size: cover;/*aqui le estoy diciendo que mi fondo me ocupe todo la pantalla de fondo*/
     font-family: 'Carter One', Arial, Helvetica, sans-serif;/*establecemos el tipo de letra*/
     min-height: 100vh;/*aqui le estoy diciendo que el tamaño mínimo del body sea 100 vh (vh es el area visible) */
 }
-header{
-    background: black;/*le estoy diciendo que el fondo de la cabecera quiero que este de color negro*/
-    padding: 10px;/*lo que quiero que me ocupe el encabezado*/
-    text-align: center;/*aqui le digo que quiero mi titulo (ahorcado) en el centro del encabezado*/
-    margin-bottom: 20px;/*aqui le digo que le doy un margen hacia abajo de 20 px*/
-}
+
 
 h1{ /*el h1 es donde esta mi palabra AHORCADO*/
     margin: 0;/*margen de 0*/
@@ -18,6 +16,7 @@ h1{ /*el h1 es donde esta mi palabra AHORCADO*/
 }
 
 main{
+    background-image: url("images/fondo.png") no-repeat center;/*le estoy diciendo donde esta mi imagen de fondo que no se va a repetir y que va a estar centrada en todos los sentidos.*/
     width: 80%;/*le estoy diciendo que quiero un ancho del 80% de mi contenedor (parte donde esta el juego)*/
     margin: auto;/*aqui le digo que quiero que este centrado en el eje horizontal*/
     padding: 20px;/*le estoy dando un borde de 20 pixeles a mi contenedor*/
@@ -25,13 +24,22 @@ main{
     display: flex;/*aqui le estoy diciendo que los dos "hijos" de mi main (que es la imagen y los span (las rallitas de las letras de la palabra)) me los ponga uno al lado del otro*/
     gap: 30px;/*le estoy diciendo que entre objeto y objeto tenga un espacio de 30px*/
 }
-
+.game-container{display: flex;}
+.game{ 
+    display: flex ;
+    flex-direction: column;
+    justify-content: flex-end;
+}
 #imagen{ /*el # es para que me busque algo en el HTML, en este caso le estoy diciendo que me busque la imagen*/
     width: 200px;/*le estoy diciendo que el tamaño de la imagen sea de 200px*/
 }
 
 #palabra_a_adivinar{
     height: 3em;/*esto quiere decir que mi palabra a adivinar tiene que ser 3am (explicado abajo lo de em)*/
+}
+
+#jugar {
+    width: 100px;
 }
 
 #palabra_a_adivinar span{ /*rallitas para las letras*/
@@ -55,4 +63,8 @@ main{
     width: 28px;/*le estoy diciendo que tenga un hancho de 28 px*/
     padding: 6px 0;/*le estoy diciendo que quiero 6 pixeles arriba y abajo de mis letras (para que me lo haga mas o menos cuadrado y las letras no me queden pegadas al boton) y el 0 me indica que no quiero espacio ni a la izquierda ni a la derecha de la letra*/
     text-align: center;/*le estoy diciendo que el contenido de mi boton (es decir, la letra) este centrado horizontalmente*/
+}
+
+#resultado{
+    margin-top: 10px;
 }
