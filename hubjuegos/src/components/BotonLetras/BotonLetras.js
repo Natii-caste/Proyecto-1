@@ -1,6 +1,7 @@
-import "./BotonLetras.css"; //!importo mi css de los botones (para que este todo conectado)
+import { click_letras } from "../../utils";
+import "./BotonLetras.css";
 
-const template = ` //! hago un templete de string solo de los botones de las teclas
+const template = ` 
           <button>a</button>
           <button>b</button>
           <button>c</button>
@@ -30,5 +31,14 @@ const template = ` //! hago un templete de string solo de los botones de las tec
           <button>z</button>
 `;
 
-export const PrintBotonLetras = () =>
-  (document.getElementById("letras").innerHTML = template); //! hago una función que apunta a la parte de letras de mi otro templete, le metemos el inerHTML porque es un texto
+const listeners = () => {
+  const btn_letras = document.querySelectorAll("#letras button");
+  for (let i = 0; i < btn_letras.length; i++) {
+    btn_letras[i].addEventListener("click", click_letras);
+  }
+};
+
+export const PrintBotonLetras = () => {
+  document.getElementById("letras").innerHTML = template;
+  listeners();
+};

@@ -1,3 +1,5 @@
+//!-----PONGO LOS ESTADOS DE MI JUEGO---
+
 const infoJuego = {
   palabrita: "",
   cant_aciertos: 0,

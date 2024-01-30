@@ -20,9 +20,9 @@ const template = () => `
         </figure>
       </li>
       <li>
-        <figure id= "navigateahorcado"> //!meto el id de mi minijuego
+        <figure id= "navigateahorcado"> 
           <img
-            src="https://play-lh.googleusercontent.com/8kcyCd2wFrUqaLGWuJJ4FhpqeH0IJv7MNWHNyYwiasskTT0kgB7r0B_XU2bop4oofhQt=w240-h480-rw"
+            src="https://cdn-icons-png.flaticon.com/128/3274/3274156.png"
             alt=" vamos a jugar al ahorcado"
           />  
           <h2>AHORCADO</h2>

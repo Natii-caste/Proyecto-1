@@ -1,6 +1,3 @@
-
-/*@import url('https://fonts.googleapis.com/css2? family= Carter+One & display=swap');*/
-
 body{
     margin: 0; /*margen = 0*/
     
@@ -16,30 +13,37 @@ h1{ /*el h1 es donde esta mi palabra AHORCADO*/
 }
 
 main{
-    background-image: url("images/fondo.png") no-repeat center;/*le estoy diciendo donde esta mi imagen de fondo que no se va a repetir y que va a estar centrada en todos los sentidos.*/
+    background-image: url("https://www.creativefabrica.com/wp-content/uploads/2022/11/28/Hangmans-Noose-Tree-Background-49132024-1.png") no-repeat center;/*le estoy diciendo donde esta mi imagen de fondo que no se va a repetir y que va a estar centrada en todos los sentidos.*/
     width: 80%;/*le estoy diciendo que quiero un ancho del 80% de mi contenedor (parte donde esta el juego)*/
     margin: auto;/*aqui le digo que quiero que este centrado en el eje horizontal*/
     padding: 20px;/*le estoy dando un borde de 20 pixeles a mi contenedor*/
-    background: rgba(255,255,255,.7);/*aqui le estoy diciendo que el fondo de mi contenedor quiero que sea blanco y que tenga una transparencia del 70% para que se siga viendo mi fondo*/
+    /*background: rgba(255,255,255,.7);/*aqui le estoy diciendo que el fondo de mi contenedor quiero que sea blanco y que tenga una transparencia del 70% para que se siga viendo mi fondo*/
     display: flex;/*aqui le estoy diciendo que los dos "hijos" de mi main (que es la imagen y los span (las rallitas de las letras de la palabra)) me los ponga uno al lado del otro*/
     gap: 30px;/*le estoy diciendo que entre objeto y objeto tenga un espacio de 30px*/
+    background-size: contain;
 }
 .game-container{display: flex;}
+
 .game{ 
     display: flex ;
     flex-direction: column;
     justify-content: flex-end;
 }
-#imagen{ /*el # es para que me busque algo en el HTML, en este caso le estoy diciendo que me busque la imagen*/
-    width: 200px;/*le estoy diciendo que el tamaño de la imagen sea de 200px*/
-}
 
-#palabra_a_adivinar{
-    height: 3em;/*esto quiere decir que mi palabra a adivinar tiene que ser 3am (explicado abajo lo de em)*/
+#imagen{ /*el # es para que me busque algo en el HTML, en este caso le estoy diciendo que me busque la imagen*/
+    width: 400px;/*le estoy diciendo que el tamaño de la imagen sea de 200px*/
 }
 
 #jugar {
     width: 100px;
+}
+
+#resultado{
+    margin-top: 10px;
+}
+
+#palabra_a_adivinar{
+    height: 3em;/*esto quiere decir que mi palabra a adivinar tiene que ser 3am (explicado abajo lo de em)*/
 }
 
 #palabra_a_adivinar span{ /*rallitas para las letras*/
@@ -50,21 +54,4 @@ main{
     text-align: center;/*le estoy diciendo que una vez ponga la letra ésta se ponga en el centro de la rallita (span)*/
     margin-right: 6px;/*NO LE PUEDO DAR ANCHO A UN ELEMENTO EN LINEA POR ESO PONGO EL DISPLAY: INLINE-BLOCK*/
     display: inline-block; /* le estoy diciendo que sea un elemento en linea pero que me acepte las propiedades del bloque.*/
-}
-
-#letras{ /*letras de mi teclado*/
-    margin-top: 30px;/*margen*/
-    display: flex;/*esto es para que me ponga las letras una al lado de otra (los hijos al lado de los hijos) pero no le va a importar que se haya acabado el contenedor.*/
-    flex-wrap: wrap;/*como el display:flex nos da problemas ponemos esto para que me haga el ajuste de lineas, le pongo flex porque quiero corregirlo ahí*/
-    gap: 9px;/*le estoy diciendo que haya un espacio entre letras de 9 px*/
-}
-
-#letras button{ /*formato de los botones de las letras*/
-    width: 28px;/*le estoy diciendo que tenga un hancho de 28 px*/
-    padding: 6px 0;/*le estoy diciendo que quiero 6 pixeles arriba y abajo de mis letras (para que me lo haga mas o menos cuadrado y las letras no me queden pegadas al boton) y el 0 me indica que no quiero espacio ni a la izquierda ni a la derecha de la letra*/
-    text-align: center;/*le estoy diciendo que el contenido de mi boton (es decir, la letra) este centrado horizontalmente*/
-}
-
-#resultado{
-    margin-top: 10px;
 }
