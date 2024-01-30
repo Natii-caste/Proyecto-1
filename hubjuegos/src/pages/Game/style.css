@@ -1,57 +1,124 @@
-body{
-    margin: 0; /*margen = 0*/
-    
-    background-size: cover;/*aqui le estoy diciendo que mi fondo me ocupe todo la pantalla de fondo*/
-    font-family: 'Carter One', Arial, Helvetica, sans-serif;/*establecemos el tipo de letra*/
-    min-height: 100vh;/*aqui le estoy diciendo que el tamaño mínimo del body sea 100 vh (vh es el area visible) */
+
+body {
+    margin: 0;
+       background-size: cover;
+       font-family: 'Carter One', Arial, Helvetica, sans-serif;
+       min-height: 100vh;  
 }
 
-
-h1{ /*el h1 es donde esta mi palabra AHORCADO*/
-    margin: 0;/*margen de 0*/
-    color: white;/*y que sea de color blanco*/
+h1 {
+   
+    margin: 0;
+      color: white;   
 }
 
-main{
-    background-image: url("https://www.creativefabrica.com/wp-content/uploads/2022/11/28/Hangmans-Noose-Tree-Background-49132024-1.png") no-repeat center;/*le estoy diciendo donde esta mi imagen de fondo que no se va a repetir y que va a estar centrada en todos los sentidos.*/
-    width: 80%;/*le estoy diciendo que quiero un ancho del 80% de mi contenedor (parte donde esta el juego)*/
-    margin: auto;/*aqui le digo que quiero que este centrado en el eje horizontal*/
-    padding: 20px;/*le estoy dando un borde de 20 pixeles a mi contenedor*/
-    /*background: rgba(255,255,255,.7);/*aqui le estoy diciendo que el fondo de mi contenedor quiero que sea blanco y que tenga una transparencia del 70% para que se siga viendo mi fondo*/
-    display: flex;/*aqui le estoy diciendo que los dos "hijos" de mi main (que es la imagen y los span (las rallitas de las letras de la palabra)) me los ponga uno al lado del otro*/
-    gap: 30px;/*le estoy diciendo que entre objeto y objeto tenga un espacio de 30px*/
-    background-size: contain;
+main {   
+    width: 80%;   
+    margin: auto;
+    /*le digo que quiero que este centrado en el eje horizontal*/
+    padding: 20px;
+    background: rgba(255,255,255,.7);
+    display: flex;
+    gap: 30px;
+    /*le estoy diciendo que entre objeto y objeto tenga un espacio de 30px*/
 }
-.game-container{display: flex;}
 
-.game{ 
-    display: flex ;
+.game-container {
+    display: flex;
+}
+
+.game {
+    display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
 
-#imagen{ /*el # es para que me busque algo en el HTML, en este caso le estoy diciendo que me busque la imagen*/
-    width: 400px;/*le estoy diciendo que el tamaño de la imagen sea de 200px*/
-}
+#imagen {
+  
+    width: 200px;
+    }
 
 #jugar {
     width: 100px;
 }
 
-#resultado{
+#resultado {
     margin-top: 10px;
 }
 
-#palabra_a_adivinar{
-    height: 3em;/*esto quiere decir que mi palabra a adivinar tiene que ser 3am (explicado abajo lo de em)*/
+#palabra_a_adivinar {
+    height: 3em;
 }
 
-#palabra_a_adivinar span{ /*rallitas para las letras*/
-    vertical-align: bottom;/*le estoy diciendo que todos mis span tengan una horientacion vertical y que este alineada con el elemento base (bottom) */
-    font-size: 2em;/*esto significa que el tamaño de las rallitas será el doble del tamaño de la fuente del elemento padre (es decir, de la letra) cuando la tenga)*/
-    border-bottom: 2px solid black;/*le estoy diciendo que quiero un borde de 2px, que sea una linea solida y de color negro */
-    width: 30px;/*le estoy diciendo que quiero un ancho de 30px*/
-    text-align: center;/*le estoy diciendo que una vez ponga la letra ésta se ponga en el centro de la rallita (span)*/
-    margin-right: 6px;/*NO LE PUEDO DAR ANCHO A UN ELEMENTO EN LINEA POR ESO PONGO EL DISPLAY: INLINE-BLOCK*/
-    display: inline-block; /* le estoy diciendo que sea un elemento en linea pero que me acepte las propiedades del bloque.*/
-}
+#palabra_a_adivinar span {
+ 
+    vertical-align: bottom;  
+    font-size: 2em;
+    border-bottom: 2px solid black;
+    width: 30px;
+    text-align: center;
+    margin-right: 6px;
+    display: inline-block;
+   }
+
+
+/* ------------------------ */
+ @media (min-width: 320px) and (max-width: 479px) {
+     #imagen {
+            width: 130px;
+     }
+    }
+    
+ @media (min-width: 481px) and (max-width: 767px) {
+    #imagen {
+            width: 130px;
+        }
+ }
+ 
+ @media (min-width: 768px) and (max-width: 1024px) {
+    #imagen {
+            width: 130px;
+    }
+ }
+
+ @media (min-width: 1025px) and (max-width: 1280px) {
+    #imagen {
+            width: 130px;
+    }
+ }
+/*-----------------------------------------------*/
+
+
+  @media (min-width: 320px) and (max-width: 479px) {
+    #palabra_a_adivinar span {
+    
+            vertical-align: bottom;
+            font-size: 2em;
+            border-bottom: 2px solid black;
+            width: 10px;
+            text-align: center;
+            margin-right: 5px;
+            display: inline-block;
+     }
+  }
+
+  @media (min-width: 320px) and (max-width: 479px) {
+      #imagen {
+        width: 130px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+      #imagen {
+          width: 130px;
+      }
+  }
+
+  @media (min-width: 1025px) and (max-width: 1280px) {
+      #imagen {
+          width: 130px;
+      }
+  }

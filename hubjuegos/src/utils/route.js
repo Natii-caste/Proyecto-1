@@ -31,7 +31,7 @@ export const initControler = (pagesRender) => {
       printTemplateDashboard();
       break;
     case "Ahorcado":
-      PrintsGameTemplate(); //!pongo el print de antes
+      PrintsGameTemplate();
       break;
     case "Login":
       Login();

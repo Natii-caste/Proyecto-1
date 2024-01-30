@@ -7,6 +7,7 @@ import "./style.css";
 //!creo un templete con el body del juego para añadirlo a mi HTML
 
 const template = () => ` 
+<div>
 <img id="imagen" src="img/img0.png" alt="Ahorcado" />
 <div>
       <p id="palabra_a_adivinar"></p>
@@ -14,6 +15,7 @@ const template = () => `
 
       <p id="resultado"></p>
       <div id="letras"></div> 
+</div>
 </div>
 `;
 

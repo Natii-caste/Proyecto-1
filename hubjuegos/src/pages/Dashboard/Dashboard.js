@@ -42,7 +42,7 @@ const addEventListeners = () => {
   navigatePokemon.addEventListener("click", () => {
     initControler("Pokemon");
   });
-  const navigateAhorcado = document.getElementById("navigateahorcado"); //!creo el addEventListener del minijuego
+  const navigateAhorcado = document.getElementById("navigateahorcado");
   navigateAhorcado.addEventListener("click", () => {
     initControler("Ahorcado"); //!me lo mando a route
   });

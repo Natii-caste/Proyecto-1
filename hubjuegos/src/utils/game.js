@@ -3,14 +3,14 @@ import {
   getInfoJuego,
   setAciertos,
   setErrores,
-  setPalabrita,
+  setpalabraAdivinar,
 } from "../global/state/game.state";
 
 export const obtenerNumAleatorio = (num_min, num_max) => {
   const amplitud_valores = num_max - num_min; //valor más alto - valor más bajo del random... (7 - 0)
   const valor_al_azar =
     Math.floor(Math.random() * amplitud_valores) +
-    num_min; /* 5 - 15 = 10 + 5 */
+    num_min; /* esto se hace porque en el caso de 5-15 es 10, lo que significa que mi amplitud es de 10 pero claro, me dara un numero random de 0-10 por eso le sumo el minimo para que me empiece a contar a partir de 5 */
   return valor_al_azar;
 };
 
@@ -29,10 +29,10 @@ export const iniciar = (event) => {
   const cant_palabras = palabras.length;
   const valor_al_azar = obtenerNumAleatorio(0, cant_palabras);
 
-  setPalabrita(palabras[valor_al_azar]);
-  const cant_letras = getInfoJuego().palabrita.length;
-  const btn_letras = document.querySelectorAll("#letras button");
+  setpalabraAdivinar(palabras[valor_al_azar]);
+  const cant_letras = getInfoJuego().palabraAdivinar.length;
 
+  const btn_letras = document.querySelectorAll("#letras button");
   for (let i = 0; i < btn_letras.length; i++) {
     btn_letras[i].disabled = false;
   }
@@ -49,12 +49,11 @@ export const click_letras = (event) => {
   button.disabled = true;
 
   const letra = button.innerHTML.toLowerCase();
-  const palabra = getInfoJuego().palabrita.toLowerCase();
+  const palabra = getInfoJuego().palabraAdivinar.toLowerCase();
 
   let acierto = false;
   for (let i = 0; i < palabra.length; i++) {
     if (letra == palabra[i]) {
-      //!c a m i s a
       spans[i].innerHTML = letra;
       let aciertos = parseInt(getInfoJuego().cant_aciertos);
       setAciertos(aciertos + 1);
@@ -73,9 +72,11 @@ export const click_letras = (event) => {
 
   if (getInfoJuego().cant_errores == 7) {
     document.getElementById("resultado").innerHTML =
-      "Ohh!!, la palabra era " + getInfoJuego().palabrita;
+      "Ohh!!, la palabra era " + getInfoJuego().palabraAdivinar;
     game_over();
-  } else if (getInfoJuego().cant_aciertos == getInfoJuego().palabrita.length) {
+  } else if (
+    getInfoJuego().cant_aciertos == getInfoJuego().palabraAdivinar.length
+  ) {
     document.getElementById("resultado").innerHTML = "YUJUUU!! HAS GANADO!!!";
     game_over();
   }
